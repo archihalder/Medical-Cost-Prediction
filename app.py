@@ -60,6 +60,6 @@ input.append(R_res)
 try:
     if st.button("Predict"):
         p = model.predict([input])
-        st.success(f"The estimated medical cost is {float(p)}")
+        st.success(f"The estimated medical cost is ${round(float(p),2)}")
 except:
     st.error("Please try again")
